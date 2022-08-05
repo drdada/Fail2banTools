@@ -10,7 +10,7 @@ jour)
 ;;
 today)
         echo "Affichage des attaques du jour"
-       grep "Ban " /var/log/fail2ban.log | grep `date +%Y-%m-%d` | awk '{print $NF}' | sort | awk '{print $1,"("$1")"}' | logresolve |$
+       grep "Ban " /var/log/fail2ban.log | grep `date +%Y-%m-%d` | awk '{print $NF}' | sort | awk '{print $1,"("$1")"}' | logresolve
 ;;
 service)
         echo "Affichage des attaques par IP/Services (du dernier fichier de log)"
